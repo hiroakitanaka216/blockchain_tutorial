@@ -1,5 +1,7 @@
 import hashlib
-
+import datetime
+import os
+import csv
 
 class Block:
     def __init__(self, index, timestamp, data, previousHash=""):
@@ -24,7 +26,7 @@ class Blockchain:
         self.chain = [self.createGenesisBlock().setdict()]
 
     def createGenesisBlock(self):
-        return Block(0, "2019/01/01", "Genesis block", "0")
+        return Block(0, "2021/05/12", "Genesis block", "0")
 
     def getLatestBlock(self):
         return self.chain[len(self.chain) - 1]
@@ -36,14 +38,26 @@ class Blockchain:
 
 
 def main():
+    print("please input the number of the new blocks")
+    num = int(input())
+    index = 0
     coin = Blockchain()
 
-    coin.addBlock(Block(1, "2019/01/02", "amount: 10"))
-    coin.addBlock(Block(2, "2019/01/03", "amount: 100"))
-    coin.addBlock(Block(3, "2019/01/04", "amount: 1000"))
+    for i in range(num):
+        if i==0:
+            print("Please input the data")
+        data = input()
+        index += 1
+        time = datetime.datetime.now().isoformat()
+        coin.addBlock(Block(index, time, data))
+    with open('blockchain_info.csv', 'a') as f:
+        writer = csv.writer(f)
+        #writer.writerow(coin.chain)
+        for j in range(len(coin.chain)):
+            writer.writerow(coin.chain[j])
+
 
     print(coin.chain)
-
 
 if __name__ == '__main__':
     main()
