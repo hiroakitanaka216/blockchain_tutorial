@@ -52,9 +52,9 @@ def main():
         coin.addBlock(Block(index, time, data))
     with open('blockchain_info.csv', 'a') as f:
         writer = csv.writer(f)
-        #writer.writerow(coin.chain)
-        for j in range(len(coin.chain)):
-            writer.writerow(coin.chain[j])
+        writer.writerow(coin.chain)
+        '''for j in range(len(coin.chain)):
+            writer.writerow(coin.chain[j])'''
 
 
     print(coin.chain)
