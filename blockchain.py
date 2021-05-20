@@ -9,7 +9,7 @@ class Block:
         self.timestamp = timestamp
         self.transaction = transaction
         self.previous_hash = previous_hash
-        self.difficulty = 4 #難易度を追加
+        self.difficulty = 4 #難易度を追加, ハッシュの頭n(=4)桁が全部0
         self.property_dict = {str(i): j for i, j in self.__dict__.items()}
         self.now_hash = self.calc_hash()
         self.proof = None # プルーフを追加
