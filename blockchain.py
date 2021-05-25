@@ -2,18 +2,19 @@
 import hashlib
 import json
 import datetime
- 
+import csv
+
 class Block:
     def __init__(self, index, timestamp, transaction, previous_hash):
         self.index = index
         self.timestamp = timestamp
         self.transaction = transaction
         self.previous_hash = previous_hash
-        self.difficulty = 4 #難易度を追加, ハッシュの頭n(=4)桁が全部0
+        self.difficulty = 4  # 難易度を追加, ハッシュの頭n(=4)桁が全部0
         self.property_dict = {str(i): j for i, j in self.__dict__.items()}
         self.now_hash = self.calc_hash()
         self.proof = None # プルーフを追加
-        self.proof_hash = None # プルーフを追加して計算したハッシュ
+        self.proof_hash = None  # プルーフを追加して計算したハッシュ
  
     def calc_hash(self):
         # ハッシュ関数: 
@@ -43,7 +44,7 @@ class Block:
                 proof += 1
         return proof
  
-# 今回はトランザクションを生成させないのでコメントアウトさせています。
+# トランザクションの生成
 '''
 def new_transaction(sender, recipient, amount):
     transaction = {
@@ -53,6 +54,10 @@ def new_transaction(sender, recipient, amount):
     }
     return transaction
 '''
+
+print("please input the number of the new blocks")
+num = int(input())
+
 block_chain = []
  
 block = Block(0, 0, [], '-') #最初のブロックを作成
@@ -61,9 +66,7 @@ block.proof = block.mining()
  
 block_chain.append(block)
  
- 
-for i in range(5):
- 
+for i in range(num):
     block = Block(i+1, str(datetime.datetime.now()), ["適当なトランザクション"], block_chain[i].now_hash)
     block.proof = block.mining()
     block_chain.append(block)
@@ -72,3 +75,8 @@ for block in block_chain:
     for key, value in block.__dict__.items():
         print(key, ':', value)
     print("")
+
+f = open('blockchain_info.csv', 'a')
+for key, value in block.__dict__.items():
+    f.write(f'{key}:{value}\n')
+    f.write("")
