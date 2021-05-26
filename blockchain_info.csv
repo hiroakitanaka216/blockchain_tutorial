@@ -1,18 +1,10 @@
-index:3
-timestamp:2021-05-25 14:23:29.050978
-transaction:['適当なトランザクション']
-previous_hash:97a419a507d3103c21ce6db824cbc249ac1af1d0a6fdb2babcc8f69268aef5e9
-difficulty:4
-property_dict:{'index': 3, 'timestamp': '2021-05-25 14:23:29.050978', 'transaction': ['適当なトランザクション'], 'previous_hash': '97a419a507d3103c21ce6db824cbc249ac1af1d0a6fdb2babcc8f69268aef5e9', 'difficulty': 4}
-now_hash:88b5357e593b4b89fc239efe042ac5d0bf1d59d0679b6031a2501389c6590833
-proof:13966
-proof_hash:00009447d736c909b4ad9ea30a8553b72a6e8034531068f54b41a75166f22d49
-index:3
-timestamp:2021-05-25 14:24:37.274150
-transaction:['適当なトランザクション']
-previous_hash:1f51b0c6653b82af12a9de32218eb340f27d55eab413ffb0ba0d6b328899c5b6
-difficulty:4
-property_dict:{'index': 3, 'timestamp': '2021-05-25 14:24:37.274150', 'transaction': ['適当なトランザクション'], 'previous_hash': '1f51b0c6653b82af12a9de32218eb340f27d55eab413ffb0ba0d6b328899c5b6', 'difficulty': 4}
-now_hash:1e4ce7e80d8db7eca3efbcfd9ccb0c59a03fc80cc854d802194ff81d0d16bb6e
-proof:87902
-proof_hash:0000f1643a2b769dfdfdb6a806445c60cffc10483c81ccbe749119c282e959b5
+index:5
+timestamp:2021-05-26 12:58:00.026271
+transaction:['とあるトランザクション']
+previous_hash:287e22f37462326313380e5856734b2f68ffe757dcc08794ef8b50c41ff92766
+difficulty:5
+property_dict:{'index': 5, 'timestamp': '2021-05-26 12:58:00.026271', 'transaction': ['とあるトランザクション'], 'previous_hash': '287e22f37462326313380e5856734b2f68ffe757dcc08794ef8b50c41ff92766', 'difficulty': 5}
+now_hash:ab62f895683240539f01046fb21862bb2efbdb0e3f5b2c5e963b243672be6fed
+proof:1118031
+proof_hash:000009e100d417ca13a6dfd2a7d19347dcdbbd9321130cf557816045b3af2ab2
+経過時間:10.350424528121948[s]difficulty:5
