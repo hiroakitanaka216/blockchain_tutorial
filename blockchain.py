@@ -86,7 +86,7 @@ for block in block_chain:
 
 t2 = time.time()
 elapse_time = t2-t1
-print(f"経過時間:{elapse_time}[s]")
-f.write(f"経過時間:{elapse_time}[s]")
-print(f'difficulty:{block.difficulty}')
-f.write(f'difficulty:{block.difficulty}')
+print(f"経過時間:{elapse_time}[s]\n")
+f.write(f"経過時間:{elapse_time}[s]\n")
+print(f'difficulty:{block.difficulty}\n')
+f.write(f'difficulty:{block.difficulty}\n')
