@@ -82,8 +82,8 @@ for block in block_chain:
         print(key, ':', value)
     print("")
 
-for key, value in block.__dict__.items():
-    f.write(f'{key}:{value}\n')
+    for key, value in block.__dict__.items():
+        f.write(f'{key}:{value}\n')
 
 t2 = time.time()
 elapse_time = t2-t1
